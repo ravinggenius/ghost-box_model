@@ -1,0 +1,30 @@
+{{!< default}}
+
+{{> site_header_secondary}}
+
+{{#post}}
+	<article class="{{post_class}}">
+		<header class="post-meta">
+			<h1 class="post-title">{{title}}</h1>
+
+			<time datetime="{{date published_at format='YYYY-MM-DDTHH:mm:ss Z'}}">{{date published_at timeago="true"}}</time>
+		</header>
+
+		<section class="post-content">
+			{{content}}
+		</section>
+
+		<footer class="post-meta">
+			<ul class="tag-cloud">
+				{{#foreach tags}}
+					<li class="tag">{{name}}</li>
+				{{/foreach}}
+			</ul>
+
+			<section class="author">
+				<h4 class="author-name">{{author.name}}</h4>
+				<p class="author-bio">{{author.bio}}</p>
+			</section>
+		</footer>
+	</article>
+{{/post}}

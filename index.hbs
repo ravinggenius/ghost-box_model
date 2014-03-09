@@ -1,0 +1,37 @@
+{{!< default}}
+
+<header class="site-meta"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
+	{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Site Logo" /></a>{{/if}}
+	<h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+	<div class="site-description">{{@blog.description}}</div>
+</header>
+
+<section>
+	{{#foreach posts}}
+		<article class="{{post_class}} excerpt">
+			<header class="post-meta">
+				<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+
+				<section class="author">
+					<h4 class="author-name">{{author.name}}</h4>
+				</section>
+
+				<time datetime="{{date published_at format='YYYY-MM-DDTHH:mm:ss Z'}}">{{date published_at timeago="true"}}</time>
+			</header>
+
+			<section class="post-excerpt">
+				<p>{{excerpt}}</p>
+			</section>
+
+			<footer class="post-meta">
+				<ul class="tag-cloud">
+					{{#foreach tags}}
+						<li class="tag">{{name}}</li>
+					{{/foreach}}
+				</ul>
+			</footer>
+		</article>
+	{{/foreach}}
+</section>
+
+{{pagination}}
