@@ -21,18 +21,8 @@
 		<main role="main">{{{body}}}</main>
 
 		<nav>
-			<menu class="site-navigation">
-				<a href="/">Home</a>
-				<a href="/about">About</a>
-			</menu>
-
-			<menu class="blogroll">
-				<a href="http://www.ravinggenius.com/">Raving Genius</a>
-				<a href="http://www.randombydesign.com/">яandomByDesign</a>
-				<a href="http://www.rip-lang.org/">Rip</a>
-				<a href="http://www.isittheweekendyet.com/">IsItTheWeekendYet?</a>
-				<a href="http://about.me/ravinggenius">About Me</a>
-			</menu>
+			{{> site_navigation}}
+			{{> blogroll}}
 		</nav>
 
 		<footer class="credits">
