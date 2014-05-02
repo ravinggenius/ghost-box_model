@@ -12,7 +12,7 @@
 					<h4 class="author-name">{{author.name}}</h4>
 				</section>
 
-				<time datetime="{{date published_at format='YYYY-MM-DDTHH:mm:ss Z'}}">{{date published_at timeago="true"}}</time>
+				{{> timestamp}}
 			</header>
 
 			<section class="post-excerpt">
