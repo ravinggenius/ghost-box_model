@@ -15,11 +15,7 @@
 		</section>
 
 		<footer class="post-meta">
-			<ul class="tag-cloud">
-				{{#foreach tags}}
-					<li class="tag">{{name}}</li>
-				{{/foreach}}
-			</ul>
+			{{> tags}}
 
 			<section class="author">
 				<h4 class="author-name">{{author.name}}</h4>
