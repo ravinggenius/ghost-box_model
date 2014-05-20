@@ -1,4 +1,7 @@
 {
   "name": "box_model",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "^3.6.2"
+  }
 }
