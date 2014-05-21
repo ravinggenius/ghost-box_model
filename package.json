@@ -1,4 +1,12 @@
 {
-	"name": "box_model",
-	"version": "0.0.1"
+  "name": "box_model",
+  "version": "0.0.1",
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "gulp-clean": "^0.2.4",
+    "gulp-jshint": "^1.6.1",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-replace": "^0.3.0",
+    "gulp-uglify": "^0.3.0"
+  }
 }
