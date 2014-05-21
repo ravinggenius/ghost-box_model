@@ -69,6 +69,17 @@ gulp.task('build:static', function () {
 		.pipe(gulp.dest(destination.static));
 });
 
+gulp.task('build', [ 'clean' ], function () {
+	return [
+		'build:markup',
+		'build:scripts',
+		'build:styles',
+		'build:static'
+	].map(function (taskName) {
+		return gulp.tasks[taskName].fn();
+	});
+});
+
 
 gulp.task('watch', function () {
 	gulp.watch(source.markup, [ 'build:markup' ]);
@@ -76,7 +87,5 @@ gulp.task('watch', function () {
 	gulp.watch(source.styles, [ 'build:styles' ]);
 	gulp.watch(source.static, [ 'build:static' ]);
 });
-
-gulp.task('build', [ 'clean', 'build:markup', 'build:scripts', 'build:styles', 'build:static' ]);
 
 gulp.task('default', [ 'lint', 'build', 'watch' ]);
