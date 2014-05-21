@@ -4,6 +4,8 @@ var clean = require('gulp-clean');
 
 var replace = require('gulp-replace');
 
+var zip = require('gulp-zip');
+
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
 
@@ -30,6 +32,11 @@ var destination = {
 	scripts: 'build/assets/scripts',
 	styles: 'build/assets/styles',
 	static: 'build'
+};
+
+var package = {
+	destination: 'packages',
+	name: 'box-model.zip'
 };
 
 
@@ -69,6 +76,23 @@ gulp.task('build:static', function () {
 		.pipe(gulp.dest(destination.static));
 });
 
+gulp.task('build', [ 'clean' ], function () {
+	return [
+		'build:markup',
+		'build:scripts',
+		'build:styles',
+		'build:static'
+	].map(function (taskName) {
+		return gulp.tasks[taskName].fn();
+	});
+});
+
+
+gulp.task('archive', [ 'lint', 'build' ], function () {
+	return gulp.src(destination.all)
+		.pipe(zip(package.name))
+		.pipe(gulp.dest(package.destination));
+});
 
 gulp.task('watch', function () {
 	gulp.watch(source.markup, [ 'build:markup' ]);
@@ -76,7 +100,5 @@ gulp.task('watch', function () {
 	gulp.watch(source.styles, [ 'build:styles' ]);
 	gulp.watch(source.static, [ 'build:static' ]);
 });
-
-gulp.task('build', [ 'clean', 'build:markup', 'build:scripts', 'build:styles', 'build:static' ]);
 
 gulp.task('default', [ 'lint', 'build', 'watch' ]);
