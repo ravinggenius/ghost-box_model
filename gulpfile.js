@@ -9,6 +9,8 @@ var stylish = require('jshint-stylish');
 
 var uglify = require('gulp-uglify');
 
+var minifyCSS = require('gulp-minify-css');
+
 
 var source = {
 	markup: 'source/**/*.hbs',
@@ -58,6 +60,7 @@ gulp.task('build:scripts', function () {
 
 gulp.task('build:styles', function () {
 	return gulp.src(source.styles)
+		.pipe(minifyCSS())
 		.pipe(gulp.dest(destination.styles));
 });
 
