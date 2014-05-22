@@ -88,7 +88,7 @@ gulp.task('build', [ 'clean' ], function () {
 });
 
 
-gulp.task('archive', [ 'lint', 'build' ], function () {
+gulp.task('archive', [ 'lint' ], function () {
 	return gulp.src(destination.all)
 		.pipe(zip(package.name))
 		.pipe(gulp.dest(package.destination));
