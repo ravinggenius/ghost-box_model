@@ -1,7 +1,7 @@
 {
   "name": "box_model",
   "version": "0.0.1",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.6.2",
     "gulp-clean": "^0.2.4",
     "gulp-jshint": "^1.6.1",
