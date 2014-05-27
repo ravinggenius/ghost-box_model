@@ -22,7 +22,10 @@ var source = {
 		'source/**/*',
 		'!source/**/*.hbs',
 		'!source/assets/scripts/**/*.js',
-		'!source/assets/styles/**/*.css'
+		'!source/assets/styles/**/*.css',
+		'LICENSE.txt',
+		'package.json',
+		'README.md'
 	]
 };
 
