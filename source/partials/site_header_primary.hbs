@@ -1,5 +1,8 @@
 <header class="site-meta"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
-	{{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Site Logo" /></a>{{/if}}
+	{{#if @blog.logo}}
+		<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Site Logo" /></a>
+	{{/if}}
+
 	<h1 class="site-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
 	<div class="site-description">{{@blog.description}}</div>
 </header>
