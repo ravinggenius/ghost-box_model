@@ -1,27 +1,25 @@
 {{!< _layout}}
 
-<section>
-	{{#foreach posts}}
-		<article class="{{post_class}} excerpt">
-			<header class="post-meta">
-				<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+{{#foreach posts}}
+	<article class="{{post_class}} excerpt">
+		<header class="post-meta">
+			<h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
 
-				<section class="author">
-					<h4 class="author-name">{{author.name}}</h4>
-				</section>
-
-				{{> timestamp}}
-			</header>
-
-			<section class="post-excerpt">
-				<p>{{excerpt}}</p>
+			<section class="author">
+				<h4 class="author-name">{{author.name}}</h4>
 			</section>
 
-			<footer class="post-meta">
-				{{> tags}}
-			</footer>
-		</article>
-	{{/foreach}}
-</section>
+			{{> timestamp}}
+		</header>
+
+		<section class="post-excerpt">
+			<p>{{excerpt}}</p>
+		</section>
+
+		<footer class="post-meta">
+			{{> tags}}
+		</footer>
+	</article>
+{{/foreach}}
 
 {{pagination}}
