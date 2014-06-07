@@ -4,6 +4,8 @@ var clean = require('gulp-clean');
 
 var replace = require('gulp-replace');
 
+var filter = require('gulp-filter');
+
 var zip = require('gulp-zip');
 
 var jshint = require('gulp-jshint');
@@ -16,8 +18,14 @@ var minifyCSS = require('gulp-minify-css');
 
 var source = {
 	markup: 'source/**/*.hbs',
-	scripts: 'source/assets/scripts/**/*.js',
-	styles: 'source/assets/styles/**/*.css',
+	scripts: [
+		'vendor/**/*.js',
+		'source/assets/scripts/**/*.js'
+	],
+	styles: [
+		'vendor/**/*.css',
+		'source/assets/styles/**/*.css'
+	],
 	static: [
 		'source/**/*',
 		'!source/**/*.hbs',
@@ -50,6 +58,7 @@ gulp.task('clean', function () {
 
 gulp.task('lint', function () {
 	return gulp.src(source.scripts)
+		.pipe(filter('vendor'))
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
