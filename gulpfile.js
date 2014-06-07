@@ -16,8 +16,14 @@ var minifyCSS = require('gulp-minify-css');
 
 var source = {
 	markup: 'source/**/*.hbs',
-	scripts: 'source/assets/scripts/**/*.js',
-	styles: 'source/assets/styles/**/*.css',
+	scripts: [
+		'vendor/**/*.js',
+		'source/assets/scripts/**/*.js'
+	],
+	styles: [
+		'vendor/**/*.css',
+		'source/assets/styles/**/*.css'
+	],
 	static: [
 		'source/**/*',
 		'!source/**/*.hbs',
