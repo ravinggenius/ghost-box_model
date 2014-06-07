@@ -1,11 +1,42 @@
-@media all {
-	body {
-		font-family: sans-serif;
-	}
-}
+@import 'layout';
 
-@media print {
-	body {
-		font-family: inherit;
-	}
-}
+
+// body.home-template
+// body.tag-template
+//   header.branding
+//     a.blog-logo !optional
+//     h1.blog-title
+//     div.blog-description
+//   main
+//     article.post.excerpt !repeat
+//   nav.global-navigation
+//     a
+//   nav.pagination
+//   footer.credits
+//     small.copyright
+
+
+// body.post-template
+//   header.branding
+//     a.blog-logo !optional
+//     h2.blog-title
+//     div.blog-description
+//   main
+//     article.post
+//   nav.global-navigation
+//     a
+//   footer.credits
+//     small.copyright
+
+
+// body.post-template.page
+//   header.branding
+//     a.blog-logo !optional
+//     h2.blog-title
+//     div.blog-description
+//   main
+//     article.page
+//   nav.global-navigation
+//     a
+//   footer.credits
+//     small.copyright
