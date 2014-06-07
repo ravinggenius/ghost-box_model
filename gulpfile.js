@@ -14,6 +14,7 @@ var stylish = require('jshint-stylish');
 var uglify = require('gulp-uglify');
 
 var minifyCSS = require('gulp-minify-css');
+var sass = require('gulp-sass');
 
 
 var source = {
@@ -24,13 +25,13 @@ var source = {
 	],
 	styles: [
 		'vendor/**/*.css',
-		'source/assets/styles/**/*.css'
+		'source/assets/styles/**/*.scss'
 	],
 	static: [
 		'source/**/*',
 		'!source/**/*.hbs',
 		'!source/assets/scripts/**/*.js',
-		'!source/assets/styles/**/*.css',
+		'!source/assets/styles/**/*.scss',
 		'LICENSE.txt',
 		'package.json',
 		'README.md'
@@ -79,6 +80,9 @@ gulp.task('build:scripts', function () {
 
 gulp.task('build:styles', function () {
 	return gulp.src(source.styles)
+		.pipe(sass({
+			outputStyle: 'nested'
+		}))
 		.pipe(minifyCSS())
 		.pipe(gulp.dest(destination.styles));
 });
