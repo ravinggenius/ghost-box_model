@@ -4,6 +4,8 @@ var clean = require('gulp-clean');
 
 var replace = require('gulp-replace');
 
+var filter = require('gulp-filter');
+
 var zip = require('gulp-zip');
 
 var jshint = require('gulp-jshint');
@@ -56,6 +58,7 @@ gulp.task('clean', function () {
 
 gulp.task('lint', function () {
 	return gulp.src(source.scripts)
+		.pipe(filter('vendor'))
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish))
 		.pipe(jshint.reporter('fail'));
