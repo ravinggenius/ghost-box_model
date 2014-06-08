@@ -1,0 +1,66 @@
+@import '../settings';
+
+
+%basic-box {
+	background-color: rgba($white, 0.85);
+	margin: 0;
+	padding: 1em;
+	width: 100%;
+}
+
+%space-box {
+	@extend %basic-box;
+	margin: 1em;
+	width: calc(100% - 4em);
+}
+
+%space-box-half {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-top: 0;
+	width: calc(50% - 3.5em);
+
+	&:nth-of-type(even) {
+		margin-right: 0.5em;
+	}
+
+	&:nth-of-type(odd) {
+		margin-left: 0.5em;
+	}
+}
+
+
+.branding,
+article.page,
+article.post,
+.pagination {
+	@extend %space-box;
+}
+
+.global-navigation,
+.credits {
+	@extend %basic-box;
+}
+
+article.post {
+	&.excerpt:not(:first-of-type) {
+		@extend %space-box-half;
+	}
+}
+
+.pagination {
+	text-align: center;
+}
+
+.global-navigation {
+	background-color: $mood-color;
+	position: fixed;
+	top: 0;
+
+	a {
+		color: $white;
+		display: inline-block;
+		padding: 0.25em;
+		text-decoration: none;
+	}
+}
