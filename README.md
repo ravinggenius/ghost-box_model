@@ -16,6 +16,10 @@ Open two terminal windows. In one navigate to `$GHOST_DIR`, and start Ghost (lik
    * Appropriate files will be rebuilt into `build` whenever you save
 0. Use `$ gulp -T` to list all available tasks
 
+## Forking
+
+Only edit files in `source`. All site-specific markup (Google Analytics code, navigation links, copyright notice) is in `source/partials`. If you decide to use this theme, please do not modify the theme's copyright notice, though for substantial changes, you may remove it.
+
 ## Deploying
 
 You can produce a Zip file that is ready to upload to Ghost(pro) with `$ gulp build; gulp archive`. Note that you should take care to manually `build` first. This is due to an issue with the `build` command. The same issue also prevents reliably running both commands in the same process, so `$ gulp build archive` also doesn't work. Hopefully a future version of gulp will obliterate this requirement.
