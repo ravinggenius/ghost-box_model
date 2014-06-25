@@ -5,7 +5,7 @@
 0. Install Box Model
    0. Clone theme into separate directory from Ghost (a sibling directory to Ghost works well)
    0. Install dependencies: `$ npm install --development`
-   0. Create a symlink to the Box Model build directory: `$ cd $GHOST_DIR/content/themes; ln -s ../../../$BOX_MODEL_DIR/build box-model; cd -`
+   0. Create a symlink to Box Model's build directory: `$ cd $GHOST_DIR/content/themes; ln -s ../../../$BOX_MODEL_DIR/build box-model; cd -`
    0. Open Ghost admin area and set theme to `box-model`
 
 ## Editing
