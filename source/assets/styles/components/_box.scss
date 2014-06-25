@@ -33,12 +33,12 @@
 .branding,
 article.page,
 article.post,
-.pagination {
+.pagination,
+.credits {
 	@extend %space-box;
 }
 
-.global-navigation,
-.credits {
+.global-navigation {
 	@extend %basic-box;
 }
 
