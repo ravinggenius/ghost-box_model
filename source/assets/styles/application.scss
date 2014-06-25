@@ -1,0 +1,59 @@
+@import 'layout';
+
+
+// body.home-template,
+// body.tag-template
+//   header.branding
+//     a.blog-logo !optional
+//     h1.blog-title
+//     div.blog-description
+//   main
+//     article.post.excerpt !repeat
+//       header.post-meta
+//         h2.post-title
+//         section.author-excerpt
+//         {{timestamp}}
+//       section.post-excerpt
+//       footer.post-meta
+//         {{tags}}
+//   nav.global-navigation
+//     a
+//   nav.pagination
+//   footer.credits
+//     small.copyright
+
+
+// body.post-template
+//   header.branding
+//     a.blog-logo !optional
+//     h2.blog-title
+//     div.blog-description
+//   main
+//     article.post
+//       header.post-meta
+//         h1.post-title
+//         {{timestamp}}
+//       section.post-content
+//       footer.post-meta
+//         {{tags}}
+//         section.author
+//   nav.global-navigation
+//     a
+//   footer.credits
+//     small.copyright
+
+
+// body.post-template.page
+//   header.branding
+//     a.blog-logo !optional
+//     h2.blog-title
+//     div.blog-description
+//   main
+//     article.post.page
+//       header.page-meta
+//         h1.page-title
+//       section.page-content
+//   nav.global-navigation
+//     a
+//   footer.credits
+//     small.copyright

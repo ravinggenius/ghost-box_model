@@ -1,0 +1,26 @@
+@import 'components';
+@import 'settings';
+
+
+html {
+	height: 100%;
+}
+
+body {
+	background-color: $mood-color;
+
+	background-image:    -moz-radial-gradient(33.333% 10%, circle farthest-corner, rgba($black, 0.5), transparent 100%);
+	background-image:     -ms-radial-gradient(33.333% 10%, circle farthest-corner, rgba($black, 0.5), transparent 100%);
+	background-image:      -o-radial-gradient(33.333% 10%, circle farthest-corner, rgba($black, 0.5), transparent 100%);
+	background-image: -webkit-radial-gradient(33.333% 10%, circle farthest-corner, rgba($black, 0.5), transparent 100%);
+	background-image:         radial-gradient(33.333% 10%, circle farthest-corner, rgba($black, 0.5), transparent 100%);
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+
+	font-family: sans-serif;
+
+	margin: 0;
+	margin-top: 4.5em;
+	padding: 0;
+}
