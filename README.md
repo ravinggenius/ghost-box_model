@@ -10,7 +10,7 @@
 
 ## Editing
 
-Open two terminal windows. In one navigate to `$GHOST_DIR`, and start Ghost (likely `$ npm start`). In the other terminal, navigate to `$BOX_MODEL_DIR`.
+Open two terminal windows. In one navigate to `$GHOST_DIR`, and start Ghost (likely `$ grunt dev`). In the other terminal, navigate to `$BOX_MODEL_DIR`.
 
 0. Run `$ gulp watch` and edit files in `source` as usual
    * Appropriate files will be rebuilt into `build` whenever you save
