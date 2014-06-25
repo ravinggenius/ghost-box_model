@@ -1,0 +1,15 @@
+@import '../settings';
+
+
+.global-navigation {
+	background-color: $mood-color;
+	position: fixed;
+	top: 0;
+
+	a {
+		color: $white;
+		display: inline-block;
+		padding: 0.25em;
+		text-decoration: none;
+	}
+}
