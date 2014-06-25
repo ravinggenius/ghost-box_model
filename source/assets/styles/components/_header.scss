@@ -1,8 +1,9 @@
 @import '../settings';
 
 
-h1,
-h2 {
+.blog-title,
+.page-title,
+.post-title {
 	color: $white;
 	margin-top: 0;
 	text-shadow: 2px 2px 10px $mood-color;
