@@ -48,7 +48,7 @@ var destination = {
 
 var package = {
 	destination: 'packages',
-	name: 'box-model.zip'
+	name: 'box-model-' + require('./package.json').version + '.zip'
 };
 
 
